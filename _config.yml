@@ -49,7 +49,8 @@ rss_icon: true
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: trusocials_in_search: true
+search_enabled: true
+trusocials_in_search: true
 bib_search: true
 
 # Dimensions
