@@ -26,7 +26,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Hey there! I’m Siddharth, and I’m all about blending technology with curiosity to create impactful solutions. I’m currently pursuing dual degrees:
 
-- **B.Tech in Information Technology & Mathematical Innovations** at the **[Cluster Innovation Centre, University of Delhi](https://https://cic.du.ac.in//)**
+- **B.Tech in Information Technology & Mathematical Innovations** at the **[Cluster Innovation Centre, University of Delhi](https://cic.du.ac.in//)**
 - **B.S in Data Science and Applications** at **[IIT Madras](https://onlinedegree.iitm.ac.in/)**
 
 
