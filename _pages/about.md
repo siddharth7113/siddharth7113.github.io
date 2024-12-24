@@ -33,7 +33,7 @@ Hey there! I’m Siddharth, and I’m all about blending technology with curiosi
 I am also a **Volunteer Research Assistant** at the **[Financial Services Innovation Lab](https://fintech.gatech.edu/)** at **[Georgia Institute of Technology](https://www.gatech.edu/)**, where I contribute to cutting-edge research in Financial NLP models and data analysis.
 
 In my free time ,I work on interesting software and hardware projects. Currently, I am working on **Micro-drones from scratch**. I wrote a blog about my journey
-check it our here [**Dreaming about Drones**]
+check it our here [**Dreaming about Drones**](/projects/micro_drones.md)
 
 Some of the my personal past favourite projects include:
 
