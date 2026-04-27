@@ -201,6 +201,12 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  books:
+    output: true
+    permalink: /:collection/:path/
+  courses:
+    output: true
+    permalink: /:collection/:title/
 
 announcements:
   enabled: true

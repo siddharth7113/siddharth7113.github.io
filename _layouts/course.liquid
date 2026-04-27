@@ -1,0 +1,75 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+{% assign playlist_id = "" %}
+{% assign video_id = page.youtube_video_id %}
+{% if page.playlist_url contains "list=" %}
+  {% assign after_list = page.playlist_url | split: "list=" | last %}
+  {% assign playlist_id = after_list | split: "&" | first %}
+{% endif %}
+{% if video_id == blank and page.playlist_url contains "v=" %}
+  {% assign after_v = page.playlist_url | split: "v=" | last %}
+  {% assign video_id = after_v | split: "&" | first %}
+{% endif %}
+
+{% capture embed_src %}{% if playlist_id != "" %}https://www.youtube.com/embed/videoseries?list={{ playlist_id }}{% elsif video_id != blank %}https://www.youtube.com/embed/{{ video_id }}{% endif %}{% endcapture %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      {% if page.instructor %}{{ page.instructor }}{% endif %}
+      {% if page.institution %}&middot; {{ page.institution }}{% endif %}
+      {% if page.year %}&middot; {{ page.year }}{% endif %}
+    </p>
+    <p class="post-tags">
+      {% if page.status %}
+        <span class="badge badge-pill badge-secondary">{{ page.status }}</span>
+      {% endif %}
+      {% if page.lectures_total %}
+        <span class="badge badge-pill badge-light">
+          {{ page.lectures_watched | default: 0 }} / {{ page.lectures_total }} lectures
+        </span>
+      {% endif %}
+    </p>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if embed_src != "" %}
+    <div class="course-embed mb-4">
+      <div class="ratio ratio-16x9" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe
+          src="{{ embed_src }}"
+          title="{{ page.title }} playlist"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        ></iframe>
+      </div>
+      {% if page.playlist_url %}
+        <p class="text-muted small mt-2">
+          <a href="{{ page.playlist_url }}" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+        </p>
+      {% endif %}
+    </div>
+  {% elsif page.playlist_url %}
+    <p>
+      <a href="{{ page.playlist_url }}" target="_blank" rel="noopener">Course page / playlist &rarr;</a>
+    </p>
+  {% endif %}
+
+  <article class="post-content">
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+</div>

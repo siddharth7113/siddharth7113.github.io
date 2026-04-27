@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+{% assign book_slug = page.slug %}
+{% assign chapters = site.books | where: "book", book_slug | sort: "order" %}
+
+<div class="post">
+  <header class="post-header">
+    <div class="row align-items-start">
+      {% if page.cover %}
+        <div class="col-sm-3 col-4 mb-3">
+          <img class="img-fluid rounded book-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }} cover" />
+        </div>
+      {% endif %}
+      <div class="col">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.author %}
+          <p class="post-meta">by {{ page.author }}</p>
+        {% endif %}
+        <p class="post-tags">
+          {% if page.status %}
+            <span class="badge badge-pill badge-secondary">{{ page.status }}</span>
+          {% endif %}
+          {% if page.category %}
+            <span class="badge badge-pill badge-light">{{ page.category }}</span>
+          {% endif %}
+        </p>
+        {% if page.description %}
+          <p class="post-description">{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <article class="post-content">
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+
+    {% if chapters.size > 0 %}
+      <hr>
+      <h2>Notes</h2>
+      <ul class="book-toc">
+        {% for chapter in chapters %}
+          <li>
+            <a href="{{ chapter.url | relative_url }}">{{ chapter.title }}</a>
+            {% if chapter.description %}
+              <span class="text-muted"> — {{ chapter.description }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </article>
+</div>

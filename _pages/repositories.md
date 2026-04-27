@@ -4,7 +4,7 @@ permalink: /repositories/
 title: Repositories
 description: Below is a list of all my project repositories. Click on any of them to explore their content!
 nav: true
-nav_order: 4
+nav_order: 6
 ---
 
 <!-- {% if site.data.repositories.github_users %}

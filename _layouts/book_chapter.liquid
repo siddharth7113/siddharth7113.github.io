@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+{% assign book_slug = page.book %}
+{% assign book = site.books | where: "slug", book_slug | first %}
+{% assign chapters = site.books | where: "book", book_slug | sort: "order" %}
+
+{% assign current_index = -1 %}
+{% for chapter in chapters %}
+  {% if chapter.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign prev_index = current_index | minus: 1 %}
+{% assign next_index = current_index | plus: 1 %}
+
+<div class="post">
+  <header class="post-header">
+    {% if book %}
+      <p class="post-tags">
+        <a href="{{ book.url | relative_url }}">
+          <i class="fa-solid fa-book fa-sm"></i> {{ book.title }}
+        </a>
+      </p>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.last_updated %}
+      <p class="post-meta">last updated {{ page.last_updated | date: '%B %d, %Y' }}</p>
+    {% endif %}
+  </header>
+
+  <article class="post-content">
+    {% if page.toc and page.toc.beginning %}
+      <div id="table-of-contents">
+        {% toc %}
+      </div>
+      <hr>
+    {% endif %}
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+
+  <hr>
+  <nav class="book-chapter-nav d-flex justify-content-between">
+    <span>
+      {% if prev_index >= 0 %}
+        {% assign prev_chapter = chapters[prev_index] %}
+        <a href="{{ prev_chapter.url | relative_url }}">&larr; {{ prev_chapter.title }}</a>
+      {% endif %}
+    </span>
+    <span>
+      {% if next_index < chapters.size %}
+        {% assign next_chapter = chapters[next_index] %}
+        <a href="{{ next_chapter.url | relative_url }}">{{ next_chapter.title }} &rarr;</a>
+      {% endif %}
+    </span>
+  </nav>
+</div>
