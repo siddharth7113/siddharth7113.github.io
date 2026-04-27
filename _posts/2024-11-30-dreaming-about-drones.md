@@ -1,11 +1,15 @@
 ---
-layout: page
-title: Dreaming about Drones
-description: Development of nano-drones with custom PCB and autonomous navigation.
-img: /assets/img/drone_project_image.png  # Path to your image
-importance: 1
-category: current work
-related_publications: false
+title: "Dreaming about Drones"
+subtitle: "Building nano-drones from scratch — MOSFETs, custom PCBs, and the messy 18 months of figuring it out."
+description: "An honest log of building micro-drones from scratch — three PCB iterations, ESC failures, and the people who kept it going."
+date: 2024-11-30
+author: Siddharth
+layout: post
+math: false
+giscus_comments: true
+share: true
+tags: [drones, electronics, pcb, hardware]
+thumbnail: /assets/img/drone_project_image.png
 ---
 
 ## My Journey So Far
