@@ -75,8 +75,10 @@ display_statuses:
         </div>
       {% endfor %}
     </div>
-  {% endif %}
+
+{% endif %}
 {% endfor %}
+
 </div>
 
 <style>

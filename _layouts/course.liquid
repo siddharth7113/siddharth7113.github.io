@@ -7,15 +7,15 @@ layout: default
   </style>
 {% endif %}
 
-{% assign playlist_id = "" %}
+{% assign playlist_id = '' %}
 {% assign video_id = page.youtube_video_id %}
-{% if page.playlist_url contains "list=" %}
-  {% assign after_list = page.playlist_url | split: "list=" | last %}
-  {% assign playlist_id = after_list | split: "&" | first %}
+{% if page.playlist_url contains 'list=' %}
+  {% assign after_list = page.playlist_url | split: 'list=' | last %}
+  {% assign playlist_id = after_list | split: '&' | first %}
 {% endif %}
-{% if video_id == blank and page.playlist_url contains "v=" %}
-  {% assign after_v = page.playlist_url | split: "v=" | last %}
-  {% assign video_id = after_v | split: "&" | first %}
+{% if video_id == blank and page.playlist_url contains 'v=' %}
+  {% assign after_v = page.playlist_url | split: 'v=' | last %}
+  {% assign video_id = after_v | split: '&' | first %}
 {% endif %}
 
 {% capture embed_src %}{% if playlist_id != "" %}https://www.youtube.com/embed/videoseries?list={{ playlist_id }}{% elsif video_id != blank %}https://www.youtube.com/embed/{{ video_id }}{% endif %}{% endcapture %}
@@ -33,9 +33,7 @@ layout: default
         <span class="badge badge-pill badge-secondary">{{ page.status }}</span>
       {% endif %}
       {% if page.lectures_total %}
-        <span class="badge badge-pill badge-light">
-          {{ page.lectures_watched | default: 0 }} / {{ page.lectures_total }} lectures
-        </span>
+        <span class="badge badge-pill badge-light"> {{ page.lectures_watched | default: 0 }} / {{ page.lectures_total }} lectures </span>
       {% endif %}
     </p>
     {% if page.description %}
@@ -43,7 +41,7 @@ layout: default
     {% endif %}
   </header>
 
-  {% if embed_src != "" %}
+  {% if embed_src != '' %}
     <div class="course-embed mb-4">
       <div class="ratio ratio-16x9" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
         <iframe

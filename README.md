@@ -34,17 +34,18 @@ If `imagemagick` errors show up the first time, it's because the image variants 
    ---
    layout: book
    title: <Book title>
-   slug: <slug>           # must match the directory name below
+   slug: <slug> # must match the directory name below
    is_book: true
    author: <author>
-   status: currently reading   # or: paused | finished
-   category: technical          # optional, free-form
+   status: currently reading # or: paused | finished
+   category: technical # optional, free-form
    cover: /assets/img/books/<slug>.jpg
    description: <one-line blurb>
    ---
    ```
 2. Drop the cover image at `assets/img/books/<slug>.jpg`.
 3. For each chapter note, create `_books/<slug>/ch-XX.md`:
+
    ```yaml
    ---
    layout: book_chapter

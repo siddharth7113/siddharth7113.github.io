@@ -7,16 +7,20 @@ importance: 5
 category: side projects
 related_publications: false
 ---
+
 ### Overview
+
 Developed a platform to analyze and summarize 10-K filings using advanced language models.
 
 **Links**:
+
 - [GitHub Repository](https://github.com/your-10k-repo)
 - [Resume](https://your-website.com/assets/resume.pdf)
 
 ---
 
 ### Features
+
 - **Models**: Fine-tuned MixRank-BERT for extracting relevant information.
 - **Frameworks**: Used OpenRouter API, Streamlit, and Python for implementation.
 - **Output**: Generated concise summaries and visual insights from financial filings.
@@ -24,5 +28,6 @@ Developed a platform to analyze and summarize 10-K filings using advanced langua
 ---
 
 ### Current Status
+
 - Expanding functionality to analyze filings from other financial domains.
 - Optimizing the platform for speed and scalability.

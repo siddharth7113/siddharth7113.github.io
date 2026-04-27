@@ -8,14 +8,14 @@ layout: default
 {% endif %}
 
 {% assign book_slug = page.slug %}
-{% assign chapters = site.books | where: "book", book_slug | sort: "order" %}
+{% assign chapters = site.books | where: 'book', book_slug | sort: 'order' %}
 
 <div class="post">
   <header class="post-header">
     <div class="row align-items-start">
       {% if page.cover %}
         <div class="col-sm-3 col-4 mb-3">
-          <img class="img-fluid rounded book-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }} cover" />
+          <img class="img-fluid rounded book-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }} cover">
         </div>
       {% endif %}
       <div class="col">

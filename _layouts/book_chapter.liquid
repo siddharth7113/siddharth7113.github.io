@@ -8,8 +8,8 @@ layout: default
 {% endif %}
 
 {% assign book_slug = page.book %}
-{% assign book = site.books | where: "slug", book_slug | first %}
-{% assign chapters = site.books | where: "book", book_slug | sort: "order" %}
+{% assign book = site.books | where: 'slug', book_slug | first %}
+{% assign chapters = site.books | where: 'book', book_slug | sort: 'order' %}
 
 {% assign current_index = -1 %}
 {% for chapter in chapters %}
@@ -24,9 +24,7 @@ layout: default
   <header class="post-header">
     {% if book %}
       <p class="post-tags">
-        <a href="{{ book.url | relative_url }}">
-          <i class="fa-solid fa-book fa-sm"></i> {{ book.title }}
-        </a>
+        <a href="{{ book.url | relative_url }}"> <i class="fa-solid fa-book fa-sm"></i> {{ book.title }} </a>
       </p>
     {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
