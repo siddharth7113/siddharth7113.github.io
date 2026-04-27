@@ -116,7 +116,7 @@
   "skills": [
     {
       "name": "Programming Languages",
-      "keywords": ["C", "Java", "Python", "R", "Embedded C","Julia"]
+      "keywords": ["C", "Java", "Python", "R", "Embedded C", "Julia"]
     },
     {
       "name": "Tools",
@@ -139,7 +139,7 @@
       "date": "",
       "issuer": "NPTEL"
     },
-    
+
     {
       "name": "Fundamentals of IoT",
       "date": "",

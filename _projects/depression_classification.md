@@ -8,14 +8,17 @@ related_publications: false
 ---
 
 ## Overview
+
 Developed a machine learning pipeline for classifying depression levels using Burns Depression Checklist (BDC) scores.
 
-**Links**:  
+**Links**:
+
 - [GitHub Repository](https://github.com/your-depression-repo)
 
 ---
 
 ## Features
+
 - **Preprocessing**: Used SelectKBest, mRMR, and Boruta for feature selection.
 - **Models**: Implemented KNN, XGBoost, Gradient Boosting, AdaBoost, and Random Forest classifiers.
 - **Evaluation**: Achieved high accuracy and F1 scores with detailed confusion matrix analysis.
@@ -23,5 +26,6 @@ Developed a machine learning pipeline for classifying depression levels using Bu
 ---
 
 ## Current Status
+
 - Extending the model for real-world deployment in healthcare applications.
 - Exploring interpretability techniques like SHAP to understand model predictions.

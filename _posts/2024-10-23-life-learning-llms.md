@@ -10,7 +10,6 @@ giscus_comments: true
 share: true
 ---
 
-
 # Introduction
 
 I recently started the third year of my CS degree and realized something significant: I am part of the first generation of college students who have access to a whole new paradigm of learning with AI. Up to this point, everything I heard about AI was theoretical. The most significant anecdote in my memory about AI stems from my 6th or 7th-grade English book, an Isaac Asimov story [[1]](#1).
@@ -65,7 +64,6 @@ Recently, Andrej Karpathy tweeted this
 
 The truth is I am still looking for the **middle ground.**
 
-
 This is my first time writing a blog
 
 . Please leave feedback, thoughts, and criticism—I'd love to hear from you on [X/Twitter](https://x.com/Sid_899).
@@ -74,9 +72,9 @@ This is my first time writing a blog
 
 ### References
 
-1. [The Fun They Had](https://en.wikipedia.org/wiki/The_Fun_They_Had)  
-2. [Original Draft](https://www.notion.so/Original-Draft-128a0da4ab5080148c7cf337b788a530?pvs=21)  
-3. I have coined this term, hoping it catches on!  
-4. [Baby Walker](https://en.wikipedia.org/wiki/Baby_walker)  
+1. [The Fun They Had](https://en.wikipedia.org/wiki/The_Fun_They_Had)
+2. [Original Draft](https://www.notion.so/Original-Draft-128a0da4ab5080148c7cf337b788a530?pvs=21)
+3. I have coined this term, hoping it catches on!
+4. [Baby Walker](https://en.wikipedia.org/wiki/Baby_walker)
 
 ---
