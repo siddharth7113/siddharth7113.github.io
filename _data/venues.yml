@@ -1,9 +1,3 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Maps venue abbreviation (the `abbr:` field of a bibtex entry) → url and color.
+# Used by jekyll-scholar to render the colored venue badge next to publications.
+# Add entries here when you start populating _bibliography/papers.bib.

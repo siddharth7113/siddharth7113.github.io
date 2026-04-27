@@ -9,10 +9,8 @@ last_name: null
 email: siddharth899@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
    A simple portfolio for Siddharth, showcasing projects, achievements, and academic work.
-footer_text: 
-  # Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  # Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+footer_text: >
+  Source on <a href="https://github.com/siddharth7113/siddharth7113.github.io">GitHub</a>.
 keywords: portfolio, Siddharth, AI, Projects, Machine Learning,Computational Biology, Drones # Customize based on your skills and areas of focus
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🌐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -166,8 +164,8 @@ giscus:
   emit_metadata: 0
   lang: en
 
-# Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+# Disqus comments (DEPRECATED) — leave blank, giscus is the configured option above.
+disqus_shortname:
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -235,23 +233,16 @@ kramdown:
 include: ["_pages"]
 exclude:
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
-  - readme_preview/
   - vendor
   - _drafts/
 keep_files:
@@ -321,8 +312,8 @@ display_categories:
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: []
+  first_name: []
 
   style: apa
   locale: en
